@@ -1229,6 +1229,14 @@ CAmount GetBlockValue(int nHeight, const CAmount& nFees)
     if (halvings >= 64)
         return nFees;
 
+    if (nHeight == 1) {
+        return 40000000 * COIN;
+    }
+    if (nHeight >= 1) {
+        return 0;
+    }
+    
+
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
 

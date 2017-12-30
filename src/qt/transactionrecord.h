@@ -79,8 +79,8 @@ public:
         SendToSelf
     };
 
-    /** Number of confirmation recommended for accepting a transaction */
-    static const int RecommendedNumConfirmations = 6;
+    /** Number of confirmation recommended for accepting a transaction  交易确认块数推荐值*/ 
+    static const int RecommendedNumConfirmations = 2;
 
     TransactionRecord():
             hash(), time(0), type(Other), address(""), debit(0), credit(0), idx(0)

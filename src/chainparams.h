@@ -81,6 +81,7 @@ public:
     virtual const Checkpoints::CCheckpointData& Checkpoints() const = 0;
 protected:
     CChainParams() {}
+    CAmount nGenesisSubsidy;
 
     uint256 hashGenesisBlock;
     MessageStartChars pchMessageStart;
